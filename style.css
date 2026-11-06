@@ -1,0 +1,289 @@
+/* ===== variables: colours and font in one place ===== */
+:root {
+  --color-primary: #2b6cb0;
+  --color-primary-dark: #1e4e80;
+  --color-bg-light: #f4f7fb;
+  --color-bg-white: #ffffff;
+  --color-border: #e0e0e0;
+  --color-text: #222222;
+  --color-text-light: #444444;
+  --color-dark-bg: #0a0e27;
+  --color-card-bg: #10cfee;
+  --color-error: #c53030;
+  --color-success: #2f855a;
+  --font-main: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+/* ===== reset ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;       /* smooth scrolling when a nav link is clicked */
+  scroll-padding-top: 5rem;      /* stops the sticky header from covering section titles */
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+h2 { font-size: 2rem; font-weight: 600; text-align: center; margin-bottom: 1rem; }
+
+/* ===== HEADER (sticky = stays at the top while scrolling) ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2.5rem;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.nav-links { display: flex; list-style: none; gap: 1.8rem; }
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--color-primary); }
+
+.menu-btn {
+  display: none;                 /* hidden on desktop, shown on phones (see media query) */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  padding: 0.75rem 1.8rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn:hover { background-color: var(--color-primary-dark); transform: translateY(-2px); }
+
+.btn-outline { background-color: transparent; color: var(--color-primary); margin-left: 0.5rem; }
+.btn-outline:hover { color: var(--color-bg-white); }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 75vh;              /* vh = 75% of the screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background-color: var(--color-bg-light);
+}
+
+/* a keyframes animation: the hero text fades in and slides up when the page loads */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-content { animation: fadeUp 0.9s ease; }
+
+.hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 32rem;
+  margin: 0 auto 1.8rem auto;
+  color: var(--color-text-light);
+}
+
+/* ===== ABOUT ===== */
+.about { padding: 4rem 2.5rem; max-width: 800px; margin: 0 auto; }
+.about p { margin-bottom: 1.1rem; color: var(--color-text-light); }
+.about h3 { margin: 1.8rem 0 0.8rem 0; font-weight: 600; }
+
+.skills { display: flex; flex-wrap: wrap; gap: 0.7rem; list-style: none; }
+.skills li {
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===== SERVICES ===== */
+.services { background-color: var(--color-dark-bg); padding: 5rem 2.5rem; }
+.services h2 { color: var(--color-bg-white); margin-bottom: 2.5rem; }
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.service-card {
+  flex: 1 1 calc(25% - 1.5rem);  /* 4 cards per row on desktop, 2 rows for 8 cards */
+  background-color: var(--color-card-bg);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); }
+
+.service-card h3 { color: var(--color-bg-white); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.7rem; }
+.service-card p { color: var(--color-bg-white); font-size: 0.92rem; }
+
+/* ===== CONTACT ===== */
+.contact { background-color: var(--color-bg-light); padding: 5rem 2.5rem; }
+.section-intro { text-align: center; color: var(--color-text-light); margin-bottom: 2.5rem; }
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contact-info { flex: 1 1 250px; }
+.contact-info h3 { margin-bottom: 1rem; }
+.contact-info p { margin-bottom: 0.6rem; }
+.contact-info a { color: var(--color-primary); }
+
+.contact-form {
+  flex: 2 1 350px;
+  background-color: var(--color-bg-white);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+.contact-form label { display: block; font-weight: 500; margin-bottom: 0.3rem; }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus { outline: 2px solid var(--color-primary); }
+
+#formMessage { margin-top: 1rem; font-weight: 500; }
+#formMessage.error { color: var(--color-error); }
+#formMessage.success { color: var(--color-success); }
+
+/* ===== FAQ ===== */
+.faq { padding: 5rem 2.5rem; max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--color-border); }
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1.1rem 0;
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.faq-question:hover { color: var(--color-primary); }
+
+.faq-answer { display: none; padding-bottom: 1.1rem; color: var(--color-text-light); }
+.faq-item.open .faq-answer { display: block; }   /* script.js adds the class "open" */
+
+/* ===== FOOTER ===== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.5rem 2.5rem;
+  background-color: var(--color-dark-bg);
+  color: var(--color-bg-white);
+  font-size: 0.9rem;
+}
+.footer a { color: var(--color-card-bg); text-decoration: none; }
+
+/* ===== TABLET (900px and below): 2 service cards per row ===== */
+@media (max-width: 900px) {
+  .service-card { flex: 1 1 calc(50% - 1.5rem); }
+  .hero h1 { font-size: 2.5rem; }
+}
+
+/* ===== PHONES (768px and below): menu becomes a dropdown ===== */
+@media (max-width: 768px) {
+  .header { padding: 1rem 1.5rem; }
+  .menu-btn { display: block; }
+
+  .navbar { display: none; width: 100%; }
+  .navbar.open { display: block; }       /* script.js adds "open" when the button is clicked */
+
+  .nav-links { flex-direction: column; gap: 0; padding-top: 0.8rem; }
+  .nav-links li { border-top: 1px solid var(--color-border); }
+  .nav-links a { display: block; padding: 0.8rem 0; }
+}
+
+/* ===== SMALL PHONES (600px and below): everything in one column ===== */
+@media (max-width: 600px) {
+  h2 { font-size: 1.6rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .btn-outline { margin-left: 0; margin-top: 0.8rem; }
+
+  .about, .faq { padding: 3rem 1.5rem; }
+  .services, .contact { padding: 3.5rem 1.5rem; }
+  .service-card { flex: 1 1 100%; }
+  .contact-form { padding: 1.3rem; }
+  .footer { flex-direction: column; text-align: center; padding: 1.5rem; }
+}
+
+/* ===== SERVICE CARD LINK + SERVICE DETAIL PAGES ===== */
+.card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-dark-bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.card-link:hover { text-decoration: underline; }
+
+.service-page { max-width: 800px; margin: 0 auto; padding: 3rem 2.5rem 5rem; min-height: 70vh; }
+.back-link { display: inline-block; margin-bottom: 1.5rem; color: var(--color-primary); text-decoration: none; font-weight: 500; }
+.service-page h1 { font-size: 2.3rem; font-weight: 700; margin-bottom: 1rem; }
+.service-page h2 { text-align: left; font-size: 1.4rem; margin: 2rem 0 1rem 0; }
+.lead { font-size: 1.1rem; color: var(--color-text-light); }
+.service-page ul { margin: 0 0 2rem 1.3rem; }
+.service-page li { margin-bottom: 0.6rem; }
+
+@media (max-width: 600px) {
+  .service-page { padding: 2rem 1.5rem 3.5rem; }
+  .service-page h1 { font-size: 1.7rem; }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeCraft | Front-End Web Developer</title>
+  <meta name="description" content="CodeCraft builds clean, responsive websites for small businesses and students." />
+
+  <!-- favicon: an emoji drawn inside a tiny SVG, so no extra image file is needed -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E" />
+
+  <!-- google font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- "defer" makes the script run after the page has loaded -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <a href="#home" class="logo">&lt;/&gt; CodeCraft</a>
+
+    <!-- this button only shows on phones; script.js makes it open and close the menu -->
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hi, I'm CodeCraft.</h1>
+      <p>I build clean, simple websites for small businesses and students learning to code.</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+      <a href="#services" class="btn btn-outline">See My Services</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <h2>About CodeCraft</h2>
+
+    <p>
+      My name is <strong>Okunloye Mercy Oluwadarasimi</strong>, and CodeCraft is my personal brand as a
+      front-end web developer. I am currently a student in my second year studying
+      web development, and I created this website as part of my SIWES (Students
+      Industrial Work Experience Scheme) training here in Nigeria.
+    </p>
+
+    <p>
+      I started learning web development because I have always been curious about
+      how websites work behind the scenes — from the layout you see, to the colors,
+      to the way buttons respond when you click them. What started as curiosity has
+      slowly turned into something I actually enjoy doing, even on the days it gets
+      frustrating (and trust me, it gets frustrating).
+    </p>
+
+    <p>
+      Right now, my main focus is on HTML, CSS and JavaScript basics — things like
+      building layouts with flexbox, styling pages properly, and slowly getting
+      comfortable with how the web actually works. I am not an expert yet, and I do
+      not pretend to be one. This website itself is proof of that: it is simple,
+      it is not perfect, but it is something I built with my own hands, and I am
+      improving small small.
+    </p>
+
+    <p>
+      My goal with CodeCraft is to keep building real projects like this one,
+      learn from my mistakes, and one day be confident enough to build full
+      websites for real clients and businesses. For now, this is me documenting
+      the journey, one project at a time.
+    </p>
+
+    <h3>What I'm Working With</h3>
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript (basics)</li>
+      <li>Responsive Design</li>
+      <li>n8n Automation</li>
+      <li>Digital Marketing</li>
+    </ul>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <h2>What I Can Help You With</h2>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Website Development</h3>
+        <p>I build clean, responsive websites from scratch using HTML, CSS and JavaScript, whether it's a simple landing page or a multi-section site for your brand.</p>
+        <a href="service-website-development.html" class="card-link">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h3>Landing Page Design</h3>
+        <p>Need a single focused page for a product launch, event, or personal brand? I design and build landing pages that are fast and easy to navigate.</p>
+        <a href="service-landing-page-design.html" class="card-link">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h3>Personal Portfolio Sites</h3>
+        <p>I help students and young professionals put together a simple portfolio website to showcase their work, skills, and experience online.</p>
+        <a href="service-personal-portfolio-sites.html" class="card-link">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h3>Website Redesigns</h3>
+        <p>Got an old or outdated website? I can rebuild it with a cleaner layout, better structure, and a design that fits how it looks today.</p>
+        <a href="service-website-redesigns.html" class="card-link">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h3>Bug Fixes &amp; Maintenance</h3>
+        <p>Something on your site broken or not displaying right? I look through the code, find the issue, and fix it so your site works properly.</p>
+        <a href="service-bug-fixes-maintenance.html" class="card-link">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h3>Basic Speed &amp; SEO Cleanup</h3>
+        <p>I help tidy up small things that slow a site down or hurt visibility, like image sizes, page titles, and basic on-page SEO.</p>
+        <a href="service-speed-seo-cleanup.html" class="card-link">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h3>Social Media Ad Setup</h3>
+        <p>I set up simple Facebook ad campaigns for you, from choosing the audience to deciding where the ad will appear.</p>
+        <a href="service-social-media-ad-setup.html" class="card-link">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h3>Workflow Automation</h3>
+        <p>Using n8n, I automate repetitive tasks such as email reminders, order confirmations and saving form data to Google Sheets.</p>
+        <a href="service-workflow-automation.html" class="card-link">Learn more &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <p class="section-intro">Have a project in mind or a question? Send me a message.</p>
+
+    <div class="contact-box">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p>Email: <a href="mailto:theacebackup@gmail.com">theacebackup@gmail.com</a></p>
+        <p>Phone Number: +234 9070357263</p>
+        <p>Location: Kwara, Nigeria</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="e.g. Ada Obi" />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="e.g. ada@gmail.com" />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5" placeholder="Tell me about your project..."></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formMessage"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">How long does a website take to build?</button>
+      <p class="faq-answer">It depends on the size. A simple one-page site is quicker than a multi-page one. After we talk about what you need, I will give you an estimate.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Will my website work on phones?</button>
+      <p class="faq-answer">Yes. Every site I build is responsive, so it adjusts to phones, tablets and desktop screens.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can you fix a website I already have?</button>
+      <p class="faq-answer">Yes. Send me the details of what is not working and I will look into it, whether it is a layout problem or a broken link.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How do I get started?</button>
+      <p class="faq-answer">Use the contact form above or email me directly. Tell me a little about your project and we will take it from there.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> CodeCraft. Built during my SIWES training.</p>
+    <a href="#home">Back to top &uarr;</a>
+  </footer>
+
+</body>
+</html>
